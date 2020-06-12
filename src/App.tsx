@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
-import ResponsiveDrawer from "./components/sidebar";
-
+import { Header } from "./components/Header";
+import { Navbar } from "./components/Navbar";
+import { Particle } from "./components/Particle";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <ResponsiveDrawer />
-      </header>
+      <Navbar />
+      <Header />
+      <Particle />
     </div>
   );
 }
