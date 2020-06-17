@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   })
 );
-export const Header = () => {
+export const HomeContent = () => {
   const classes = useStyles();
 
   return (
