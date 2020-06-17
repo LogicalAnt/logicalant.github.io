@@ -17,6 +17,7 @@ import {
 import Drawer from "@material-ui/core/Drawer";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import avatar from "../../images/sidebar-image.jpeg";
 import { SidebarItems } from "./sidebarItems";
 import "./styles.css";
@@ -49,6 +50,7 @@ export const Navbar = () => {
 
   const toggleDrawer = () => {
     setDrawerPosition({
+      ...drawerPosition,
       left: !drawerPosition.left,
     });
   };
@@ -59,7 +61,13 @@ export const Navbar = () => {
       <Divider />
       <List component="nav">
         {SidebarItems.map((item, index) => (
-          <ListItem key={index} className={classes.listItem} button>
+          <ListItem
+            key={index}
+            className={classes.listItem}
+            button
+            component={Link}
+            {...{ to: item.route }}
+          >
             <ListItemIcon>{item.itemIcon}</ListItemIcon>
             <ListItemText primary={item.itemName} />
           </ListItem>
