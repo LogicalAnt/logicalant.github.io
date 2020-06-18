@@ -1,5 +1,7 @@
 import anime from "animejs";
 import React, { useEffect } from "react";
+import { Navbar } from "../../components/Navbar";
+import { Animation } from "./animation";
 export const Skill = () => {
   useEffect(() => {
     anime({
@@ -41,7 +43,8 @@ export const Skill = () => {
 
   return (
     <>
-      <div className="mo">
+      <Navbar />
+      {/* <div className="mo">
         <svg className="svg" width="100%" height="300px">
           <polygon
             className="polymorph"
@@ -50,7 +53,8 @@ export const Skill = () => {
             points="70 32.29163918302938 118.82281030905631 59.6178103090563 108.40808660038066 128.89884536415545 55.62998350981763 92.84174019885802 29.13436081697062 62.35948247245042 "
           />
         </svg>
-      </div>
+      </div> */}
+      <Animation />
     </>
   );
 };
