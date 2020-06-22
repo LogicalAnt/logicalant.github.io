@@ -1,8 +1,19 @@
 import anime from "animejs";
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles/index.css";
 
 export const Animation = () => {
+  useEffect(() => {
+    anime({
+      targets: ".mainCircle",
+      scaleX: [{ value: 1.05, duration: 1000 }],
+      scaleY: [{ value: 1.05, duration: 500 }],
+      loop: true,
+      easing: "easeInOutQuad",
+      direction: "alternate",
+    });
+  }, []);
+
   const animateJs = () => {
     anime({
       targets: ".js",
