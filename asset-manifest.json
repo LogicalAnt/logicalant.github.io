@@ -1,24 +1,33 @@
 {
   "files": {
-    "main.css": "/static/css/main.36e3cc7e.chunk.css",
-    "main.js": "/static/js/main.d0c174a0.chunk.js",
-    "main.js.map": "/static/js/main.d0c174a0.chunk.js.map",
+    "main.css": "/static/css/main.34e0eec5.chunk.css",
+    "main.js": "/static/js/main.5559d234.chunk.js",
+    "main.js.map": "/static/js/main.5559d234.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ceaf4b5f.js",
     "runtime-main.js.map": "/static/js/runtime-main.ceaf4b5f.js.map",
-    "static/js/2.d671869d.chunk.js": "/static/js/2.d671869d.chunk.js",
-    "static/js/2.d671869d.chunk.js.map": "/static/js/2.d671869d.chunk.js.map",
+    "static/css/2.bf0413c3.chunk.css": "/static/css/2.bf0413c3.chunk.css",
+    "static/js/2.f29edbad.chunk.js": "/static/js/2.f29edbad.chunk.js",
+    "static/js/2.f29edbad.chunk.js.map": "/static/js/2.f29edbad.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b763320d1ec701b3186ad18f88766343.js": "/precache-manifest.b763320d1ec701b3186ad18f88766343.js",
+    "precache-manifest.a1f027d01ebe033c4981967c1f26c8d6.js": "/precache-manifest.a1f027d01ebe033c4981967c1f26c8d6.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.36e3cc7e.chunk.css.map": "/static/css/main.36e3cc7e.chunk.css.map",
-    "static/js/2.d671869d.chunk.js.LICENSE.txt": "/static/js/2.d671869d.chunk.js.LICENSE.txt",
+    "static/css/2.bf0413c3.chunk.css.map": "/static/css/2.bf0413c3.chunk.css.map",
+    "static/css/main.34e0eec5.chunk.css.map": "/static/css/main.34e0eec5.chunk.css.map",
+    "static/js/2.f29edbad.chunk.js.LICENSE.txt": "/static/js/2.f29edbad.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/app-bg.f9877b0f.jpg",
-    "static/media/sidebar-image.jpeg": "/static/media/sidebar-image.63a94cc8.jpeg"
+    "static/media/customers.jpg": "/static/media/customers.7db05c6f.jpg",
+    "static/media/dashboard.jpg": "/static/media/dashboard.4ec2ea7a.jpg",
+    "static/media/homepage.jpg": "/static/media/homepage.dd9a82a3.jpg",
+    "static/media/login.jpg": "/static/media/login.6f2b4bd0.jpg",
+    "static/media/registration.jpg": "/static/media/registration.e235e325.jpg",
+    "static/media/sidebar-image.jpeg": "/static/media/sidebar-image.63a94cc8.jpeg",
+    "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ceaf4b5f.js",
-    "static/js/2.d671869d.chunk.js",
-    "static/css/main.36e3cc7e.chunk.css",
-    "static/js/main.d0c174a0.chunk.js"
+    "static/css/2.bf0413c3.chunk.css",
+    "static/js/2.f29edbad.chunk.js",
+    "static/css/main.34e0eec5.chunk.css",
+    "static/js/main.5559d234.chunk.js"
   ]
 }
