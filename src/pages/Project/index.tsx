@@ -7,12 +7,15 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import React from "react";
+import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
+import React, { useState } from "react";
 import { Navbar } from "../../components/Navbar";
-import { Items } from "./items";
+import { Items, ItemType } from "./items";
+import { ProjectDetailsModal } from "./modal";
 
 const useStyles = makeStyles({
-  root: {
+  root: {},
+  cardHolder: {
     maxWidth: 345,
     margin: 10,
   },
@@ -24,16 +27,24 @@ const useStyles = makeStyles({
 export const Project = () => {
   const classes = useStyles();
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalData, setModalData] = useState<ItemType>({
+    description: "",
+    image: [""],
+    link: "",
+    name: "",
+  });
+
   return (
     <>
       <Navbar />
 
-      <Grid container spacing={3}>
-        {Items.map((project) => (
-          <Grid item xs={4}>
-            <Card className={classes.root}>
+      <Grid container className={classes.root}>
+        {Items.map((project, index) => (
+          <Grid item sm={12} xs={12} md={6} lg={4} key={index}>
+            <Card className={classes.cardHolder}>
               <CardActionArea>
-                <CardMedia className={classes.media} image={project.image} />
+                <CardMedia className={classes.media} image={project.image[0]} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
                     {project.name}
@@ -43,22 +54,34 @@ export const Project = () => {
                     color="textSecondary"
                     component="p"
                   >
-                    {project.description}
+                    {project.description.substring(0, 35)}...
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-                <Button size="small" color="primary">
-                  Learn More
+              <CardActions style={{ flexDirection: "row-reverse" }}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  onClick={() => {
+                    setModalOpen(true);
+                    setModalData(project);
+                  }}
+                  startIcon={<InfoOutlinedIcon />}
+                >
+                  Details
                 </Button>
               </CardActions>
             </Card>
           </Grid>
         ))}
       </Grid>
+
+      <ProjectDetailsModal
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+        modalData={modalData}
+      />
     </>
   );
 };
