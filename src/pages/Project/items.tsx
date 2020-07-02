@@ -33,6 +33,6 @@ export const Items: ItemType[] = [
       require("../../images/projects/qstudy/homepage.jpg"),
       require("../../images/projects/qstudy/registration.jpg"),
     ],
-    link: "https://www.jantrac.com/",
+    link: "https://q-study.com/",
   },
 ];
