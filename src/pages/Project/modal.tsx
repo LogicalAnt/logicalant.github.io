@@ -23,8 +23,6 @@ export const ProjectDetailsModal = ({
   setModalOpen,
   modalData,
 }: ProjectDetailsModalParams) => {
-  console.log("data", modalData);
-
   let settings = {
     dots: true,
     infinite: true,
@@ -45,8 +43,8 @@ export const ProjectDetailsModal = ({
         <DialogTitle id="alert-dialog-title">{modalData.name}</DialogTitle>
         <DialogContent>
           <Slider {...settings}>
-            {modalData.image.map((image) => (
-              <div>
+            {modalData.image.map((image, index) => (
+              <div key={index}>
                 <img
                   style={{ width: "100%", height: "50%" }}
                   src={image}
