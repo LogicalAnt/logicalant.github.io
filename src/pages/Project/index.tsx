@@ -16,8 +16,11 @@ import { ProjectDetailsModal } from "./modal";
 const useStyles = makeStyles({
   root: {},
   cardHolder: {
-    maxWidth: 345,
-    margin: 10,
+    margin: 25,
+    "&:hover": {
+      transform: "rotate(2.5deg)",
+      transition: "transform 1s",
+    },
   },
   media: {
     height: 140,
