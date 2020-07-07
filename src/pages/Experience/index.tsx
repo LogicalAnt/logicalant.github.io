@@ -7,7 +7,6 @@ import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import React from "react";
-import { Navbar } from "../../components/Navbar";
 import { Items } from "./items";
 
 const useStyles = makeStyles((theme) => ({
@@ -41,7 +40,6 @@ export const Experience = () => {
 
   return (
     <>
-      <Navbar />
       <Timeline align="alternate" className={classes.root}>
         {Items.map((item, index) => (
           <TimelineItem {...{ id: index }}>
