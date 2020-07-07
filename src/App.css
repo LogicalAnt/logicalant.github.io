@@ -8,3 +8,8 @@ body {
   -moz-background: cover;
   -o-background: cover;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  color: tomato !important
+}
