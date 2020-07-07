@@ -5,7 +5,7 @@ export const Particle = () => {
   return (
     <>
       <Particles
-        style={{ position: "absolute" }}
+        style={{ position: "static" }}
         params={{
           particles: {
             number: {
