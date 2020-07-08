@@ -1,0 +1,35 @@
+.cardHolder:hover {
+  animation: rubberBand 2s;
+}
+
+/* Animation */
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  25% {
+    transform: scale3d(1.02, 0.95, 1);
+  }
+
+  40% {
+    transform: scale3d(0.98, 1.05, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  65% {
+    transform: scale3d(1.00, 1.00, 1);
+  }
+
+  75% {
+    transform: scale3d(1.02, 0.98, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
