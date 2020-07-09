@@ -3,10 +3,12 @@
 body {
   font-family: MuseoModerno !important;
 
-  background: url("images/app-bg.jpg") repeat center center fixed;
-  -webkit-background: cover;
+  /* background: url("images/app-bg.jpg") repeat center center fixed; 
+   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;
+  */
+  background-color: rgb(0, 0, 0) !important;
 }
 
 .slick-prev:before,
