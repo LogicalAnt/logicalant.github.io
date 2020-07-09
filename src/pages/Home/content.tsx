@@ -43,12 +43,21 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     facebookButton: {
       color: "#4267B2",
+      "&:hover": {
+        filter: "drop-shadow(0 0 .5em #5f91fb)",
+      },
     },
     linkedinButton: {
       color: "#0C77B5",
+      "&:hover": {
+        filter: "drop-shadow(0 0 .5em #2caefb)",
+      },
     },
     emailButton: {
       color: "#BC473C",
+      "&:hover": {
+        filter: "drop-shadow(0 0 .5em #f12613)",
+      },
     },
   })
 );
