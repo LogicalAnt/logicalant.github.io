@@ -1,9 +1,9 @@
 .cardHolder:hover {
-  animation: rubberBand 2s;
+  animation: cardHolderAnim 2s;
 }
 
 /* Animation */
-@keyframes rubberBand {
+@keyframes cardHolderAnim {
   from {
     transform: scale3d(1, 1, 1);
   }
