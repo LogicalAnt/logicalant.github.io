@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       color: "red",
     },
+    fontFamily: "MuseoModerno",
   },
 }));
 
