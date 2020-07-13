@@ -33,9 +33,9 @@ export const Items: ItemType[] = [
     icon: <AccessibilityNewIcon />,
   },
   {
-    instituteName: "Natore govt. boys' High School",
+    instituteName: "Natore Govt. Boys' High School",
     eduStage: "SSC",
-    description: `Wroked on multiple project`,
+    description: `I've spent wonderful time of my childhood at my school life`,
     startAt: moment("2006/01").format("MMMM YYYY"),
     endAt: moment("2010/12").format("MMMM YYYY"),
     icon: <DirectionsBikeIcon />,
