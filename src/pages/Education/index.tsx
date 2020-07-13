@@ -48,7 +48,7 @@ export const Education = () => {
         className={classes.root}
       >
         {Items.map((item, index) => (
-          <TimelineItem {...{ id: index }}>
+          <TimelineItem {...{ id: index }} key={index}>
             <TimelineOppositeContent
               style={{ display: mobileScreen ? "none" : "" }}
             >
@@ -59,9 +59,9 @@ export const Education = () => {
               >
                 {item.startAt} - {item.endAt}
               </Typography>
-              <Typography>
+              <>
                 <Chip size="small" label={item.eduStage} color="primary" />
-              </Typography>
+              </>
             </TimelineOppositeContent>
 
             <TimelineSeparator>
