@@ -54,7 +54,7 @@ export const Experience = () => {
         className={classes.root}
       >
         {Items.map((item, index) => (
-          <TimelineItem {...{ id: index }}>
+          <TimelineItem {...{ id: index }} key={index}>
             <TimelineOppositeContent
               style={{ display: mobileScreen ? "none" : "" }}
             >
