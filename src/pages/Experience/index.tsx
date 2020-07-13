@@ -1,4 +1,10 @@
-import { makeStyles, Paper, Typography } from "@material-ui/core";
+import {
+  makeStyles,
+  Paper,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
@@ -38,13 +44,20 @@ const useStyles = makeStyles((theme) => ({
 
 export const Experience = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const mobileScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <>
-      <Timeline align="alternate" className={classes.root}>
+      <Timeline
+        align={mobileScreen ? "right" : "alternate"}
+        className={classes.root}
+      >
         {Items.map((item, index) => (
           <TimelineItem {...{ id: index }}>
-            <TimelineOppositeContent>
+            <TimelineOppositeContent
+              style={{ display: mobileScreen ? "none" : "" }}
+            >
               <Typography
                 variant="body2"
                 color="textSecondary"
