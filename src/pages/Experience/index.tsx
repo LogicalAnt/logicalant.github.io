@@ -147,7 +147,12 @@ export const Experience = () => {
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography>{item.description}</Typography>
+                    <Typography
+                      variant="body2"
+                      style={{ whiteSpace: "pre-line" }}
+                    >
+                      {item.description}
+                    </Typography>
                   </AccordionDetails>
                 </Accordion>
               </Paper>
