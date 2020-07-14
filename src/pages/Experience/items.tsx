@@ -15,7 +15,13 @@ export const Items: ItemType[] = [
   {
     companyName: "Shorol Limited",
     role: "Software engineer",
-    description: "Act as backend developer",
+    description: `After RS period, I joined Shorol Limited as a software engineer. 
+      
+      It was a startup on fintech product. Shorol has its core product named Pocketmoney. Its main customer base was mostly the people who are below general banking credit score.
+       
+      I acted as Pocketmoney's one of a core developer. The product backend api's written in nodejs and react frontend. Using graphql makes it more robust application.
+      
+      Working with Shorol was a great experience for me. That frindly and flexible work environment was really a pleasant moment`,
     startAt: moment("2019/05/01").format("MMMM Do YYYY"),
     endAt: "Present",
     icon: <HotelIcon />,
