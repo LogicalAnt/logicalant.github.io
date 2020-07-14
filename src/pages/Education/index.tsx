@@ -78,7 +78,7 @@ export const Education = () => {
                 >
                   {item.instituteName}
                 </Typography>
-                <Typography variant="caption">{item.description}</Typography>
+                <Typography variant="body2">{item.description}</Typography>
               </Paper>
             </TimelineContent>
           </TimelineItem>
