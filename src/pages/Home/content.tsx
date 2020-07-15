@@ -14,7 +14,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import React from "react";
 import Typed from "react-typed";
-import avatar from "../../images/sidebar-image.jpeg";
+import avatar from "../../images/sidebar-image-low.jpg";
 import "./style.css";
 
 const useStyles = makeStyles((theme: Theme) =>
