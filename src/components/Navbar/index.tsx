@@ -19,7 +19,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SidebarItems } from "./sidebarItems";
 
@@ -113,6 +113,8 @@ export const Navbar = (routes: any) => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const [selectList, setSelectList] = useState(0);
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -163,7 +165,17 @@ export const Navbar = (routes: any) => {
         <Divider />
         <List>
           {SidebarItems.map((item, index) => (
-            <ListItem button key={index} component={Link} to={item.route}>
+            <ListItem
+              button
+              key={index}
+              component={Link}
+              to={item.route}
+              onClick={() => setSelectList(index)}
+              selected={index === selectList}
+              style={{
+                backgroundColor: index === selectList ? "#ff634733" : "",
+              }}
+            >
               <ListItemIcon style={{ color: "tomato" }}>
                 {item.itemIcon}
               </ListItemIcon>
