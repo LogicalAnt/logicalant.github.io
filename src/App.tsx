@@ -1,15 +1,15 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "./App.css";
-import { Navbar } from "./components/Navbar";
-import { About } from "./pages/About";
-import { Blog } from "./pages/Blog";
-import { Contact } from "./pages/Contact";
-import { Education } from "./pages/Education";
-import { Experience } from "./pages/Experience";
-import { Home } from "./pages/Home";
-import { Project } from "./pages/Project";
-import { Skill } from "./pages/Skill";
+import React from "react"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import "./App.css"
+import { Navbar } from "./components/Navbar"
+import { About } from "./pages/About"
+import { Blog } from "./pages/Blog"
+import { Contact } from "./pages/Contact"
+import { Education } from "./pages/Education"
+import { Experience } from "./pages/Experience"
+import { Home } from "./pages/Home"
+import { Project } from "./pages/Project"
+import { Skill } from "./pages/Skill"
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         </Switch>
       </Navbar>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
