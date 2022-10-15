@@ -1,17 +1,45 @@
-import HotelIcon from "@material-ui/icons/Hotel";
-import LaptopMacIcon from "@material-ui/icons/LaptopMac";
-import moment from "moment";
-import React from "react";
+import HotelIcon from "@material-ui/icons/Hotel"
+import LaptopMacIcon from "@material-ui/icons/LaptopMac"
+import moment from "moment"
+import React from "react"
 
 interface ItemType {
-  companyName: string;
-  role: string;
-  description: string;
-  startAt: string;
-  endAt: string;
-  icon: JSX.Element;
+  companyName: string
+  role: string
+  description: string
+  startAt: string
+  endAt: string
+  icon: JSX.Element
 }
 export const Items: ItemType[] = [
+  {
+    companyName: "Japan Marketing & Consultancy Ltd. (JMC)",
+    role: "Software engineer",
+    description: `
+    JMC is a leading global IT, consulting, and business process support company. It is Japan-Bangladesh joint venture private limited company.
+
+    Worked with the Contrars Developer team. Here we implemented a BaaS system named Vtecx into client applications built in React and React-native. 
+    Exclusively used memoization techniques to boost app performance. Implement clean coding principles as much as possible.
+    
+    Besides the project work I wrote a couple of articles about the system and the implementation
+    Here I built an npm package named vdeployer for Vtecx powered project, which was a very handy tool and is used amongst developers here on daily basis.
+    `,
+    startAt: moment("2020/10/01").format("MMMM Do YYYY"),
+    endAt: "Current",
+    icon: <HotelIcon />,
+  },
+  {
+    companyName: "Sheba.xyz",
+    role: "Software engineer",
+    description: `
+    Sheba.xyz is a largest service marketplace & one-stop solution for home services in Bangladesh.
+    
+    Shorol Ltd. has suddenly stopped their operations due to Covid situation then I moved to Sheba.xyz
+    Though I stayed here for a short period of time, but I really enjoyed the culture of their tech team`,
+    startAt: moment("2020/08/01").format("MMMM Do YYYY"),
+    endAt: moment("2020/09/01").format("MMMM Do YYYY"),
+    icon: <HotelIcon />,
+  },
   {
     companyName: "Shorol Limited",
     role: "Software engineer",
@@ -23,7 +51,7 @@ export const Items: ItemType[] = [
       
       Working with Shorol was a great experience for me. That frindly and flexible work environment was really a pleasant moment`,
     startAt: moment("2019/05/01").format("MMMM Do YYYY"),
-    endAt: "Present",
+    endAt: moment("2020/05/01").format("MMMM Do YYYY"),
     icon: <HotelIcon />,
   },
   {
@@ -36,4 +64,4 @@ export const Items: ItemType[] = [
     endAt: moment("2019/05/01").format("MMMM Do YYYY"),
     icon: <LaptopMacIcon />,
   },
-];
+]
