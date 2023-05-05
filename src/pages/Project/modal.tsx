@@ -5,17 +5,17 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-} from "@material-ui/core";
-import React, { Fragment } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-import { ItemType } from "./items";
+} from "@material-ui/core"
+import React, { Fragment, useEffect, useRef } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
+import { ItemType } from "./items"
 
 interface ProjectDetailsModalParams {
-  modalOpen: boolean;
-  setModalOpen: (status: boolean) => void;
-  modalData: ItemType;
+  modalOpen: boolean
+  setModalOpen: (status: boolean) => void
+  modalData: ItemType
 }
 
 export const ProjectDetailsModal = ({
@@ -23,13 +23,33 @@ export const ProjectDetailsModal = ({
   setModalOpen,
   modalData,
 }: ProjectDetailsModalParams) => {
+  const sliderRef: any = useRef(null)
+
+  useEffect(() => {
+    const handleKeyDown = (event: any) => {
+      if (sliderRef.current) {
+        if (event.key === "ArrowRight") {
+          sliderRef.current.slickNext()
+        } else if (event.key === "ArrowLeft") {
+          sliderRef.current.slickPrev()
+        }
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [sliderRef])
+
   let settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-  };
+  }
 
   return (
     <Fragment>
@@ -41,8 +61,8 @@ export const ProjectDetailsModal = ({
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">{modalData.name}</DialogTitle>
-        <DialogContent>
-          <Slider {...settings}>
+        <DialogContent style={{ overflowY: "unset" }}>
+          <Slider {...settings} ref={sliderRef}>
             {modalData.image.map((image, index) => (
               <div key={index}>
                 <img
@@ -77,5 +97,5 @@ export const ProjectDetailsModal = ({
         </DialogActions>
       </Dialog>
     </Fragment>
-  );
-};
+  )
+}
