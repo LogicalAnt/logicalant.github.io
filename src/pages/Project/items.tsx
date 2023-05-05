@@ -6,6 +6,16 @@ export interface ItemType {
   link: string;
 }
 export const Items: ItemType[] = [
+    {
+    name: "Contra Mobile App",
+    tag: ["react-native", "typescript", "expo"],
+    description:
+      "Contra is a mobile application build in react-native. Which is a communication app for real-estate site Contractor and workers",
+    image: [
+      require("https://play-lh.googleusercontent.com/jVMIkhW9ay-0sFSKSKSL-SuSpeVnfRHIPolkB1flfX2bpP-rYR1rJ47TyKQ6J77GEu1N=w5120-h2880-rw"),
+    ],
+    link: "https://play.google.com/store/apps/details?id=cx.vte.contra&hl=en_GB&gl=US",
+  },
   {
     name: "Pocketmoney",
     tag: ["Javascript", "nodejs", "react", "graphql", "nestjs"],
