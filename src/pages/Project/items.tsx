@@ -1,19 +1,17 @@
 export interface ItemType {
-  name: string;
-  description: string;
-  tag: Array<string>;
-  image: Array<string>;
-  link: string;
+  name: string
+  description: string
+  tag: Array<string>
+  image: Array<string>
+  link: string
 }
 export const Items: ItemType[] = [
-    {
+  {
     name: "Contra Mobile App",
     tag: ["react-native", "typescript", "expo"],
     description:
       "Contra is a mobile application build in react-native. Which is a communication app for real-estate site Contractor and workers",
-    image: [
-      require("https://play-lh.googleusercontent.com/jVMIkhW9ay-0sFSKSKSL-SuSpeVnfRHIPolkB1flfX2bpP-rYR1rJ47TyKQ6J77GEu1N=w5120-h2880-rw"),
-    ],
+    image: [require("../../images/projects/pocketmoney/registration.jpg")],
     link: "https://play.google.com/store/apps/details?id=cx.vte.contra&hl=en_GB&gl=US",
   },
   {
@@ -49,28 +47,28 @@ export const Items: ItemType[] = [
     ],
     link: "https://q-study.com/",
   },
-];
+]
 
 export const tagColor = (tag: string) => {
   switch (tag) {
     case "php":
-      return "#8892C0";
+      return "#8892C0"
     case "codeigniter":
-      return "#DD4813";
+      return "#DD4813"
     case "jQuery":
-      return "#0A69AD";
+      return "#0A69AD"
     case "nestjs":
-      return "#e0244e";
+      return "#e0244e"
     case "react":
-      return "#61DAFB";
+      return "#61DAFB"
     case "graphql":
-      return "#E00098";
+      return "#E00098"
     case "mysql":
-      return "#0A758F";
+      return "#0A758F"
     case "nodejs":
-      return "#5FB047";
+      return "#5FB047"
 
     default:
-      return "tomato";
+      return "tomato"
   }
-};
+}
