@@ -8,14 +8,14 @@ import {
   Theme,
   Tooltip,
   Typography,
-} from "@material-ui/core";
-import EmailIcon from "@material-ui/icons/Email";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import React from "react";
-import Typed from "react-typed";
-import avatar from "../../images/sidebar-image-low.jpg";
-import "./style.css";
+} from "@material-ui/core"
+import EmailIcon from "@material-ui/icons/Email"
+import GithubIcon from "@material-ui/icons/GitHub"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
+import React from "react"
+import Typed from "react-typed"
+import avatar from "../../images/sidebar-image-low.jpg"
+import "./style.css"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -60,9 +60,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
   })
-);
+)
 export const HomeContent = () => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <>
@@ -80,8 +80,9 @@ export const HomeContent = () => {
             <Typography className={classes.typedSkill}>
               <Typed
                 strings={[
-                  "FULL-STACK SOFTWARE ENGINEER",
+                  "SOFTWARE ENGINEER",
                   "Javascript Enthusiast",
+                  "Committed to ReactJS Excellence",
                   "Php Adorer",
                   "A Music Devotee",
                 ]}
@@ -110,19 +111,19 @@ export const HomeContent = () => {
 
               <IconButton
                 className={`${classes.facebookButton} contactButton`}
-                href="https://www.facebook.com/shakil147258"
+                href="https://github.com/LogicalAnt"
                 target="blank"
               >
-                <Tooltip title="shakil147258" placement="bottom" arrow>
-                  <FacebookIcon fontSize="large" />
+                <Tooltip title="LogicalAnt" placement="bottom" arrow>
+                  <GithubIcon fontSize="large" />
                 </Tooltip>
               </IconButton>
               <IconButton
                 className={`${classes.linkedinButton} contactButton`}
-                href="https://www.linkedin.com/in/unreleased/"
+                href="https://www.linkedin.com/in/logicalant/"
                 target="blank"
               >
-                <Tooltip title="unreleased" placement="bottom" arrow>
+                <Tooltip title="Logicalant" placement="bottom" arrow>
                   <LinkedInIcon fontSize="large" />
                 </Tooltip>
               </IconButton>
@@ -131,5 +132,5 @@ export const HomeContent = () => {
         </Grid>
       </Box>
     </>
-  );
-};
+  )
+}
