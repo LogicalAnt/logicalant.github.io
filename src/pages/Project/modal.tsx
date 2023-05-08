@@ -61,12 +61,16 @@ export const ProjectDetailsModal = ({
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">{modalData.name}</DialogTitle>
-        <DialogContent style={{ overflowY: "unset" }}>
+        <DialogContent style={{ maxWidth: "100%", padding: 0 }}>
           <Slider {...settings} ref={sliderRef}>
             {modalData.image.map((image, index) => (
               <div key={index}>
                 <img
-                  style={{ width: "100%", height: "50%" }}
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    margin: 10,
+                  }}
                   src={image}
                   alt="not found"
                 />
@@ -75,7 +79,9 @@ export const ProjectDetailsModal = ({
           </Slider>
         </DialogContent>
         <DialogContent>
-          <DialogContentText>{modalData.description}</DialogContentText>
+          <DialogContentText style={{ marginTop: "20px" }}>
+            {modalData.description}
+          </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button
