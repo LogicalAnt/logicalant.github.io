@@ -74,6 +74,20 @@
   justify-content: center;
 }
 
+.react-native {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgba(29, 92, 228, 0.637);
+
+  position: absolute;
+  top: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .nodejs {
   width: 85px;
   height: 85px;

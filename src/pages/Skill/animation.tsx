@@ -1,6 +1,6 @@
-import anime from "animejs";
-import React, { useEffect } from "react";
-import "./styles/index.css";
+import anime from "animejs"
+import React, { useEffect } from "react"
+import "./styles/index.css"
 
 export const Animation = () => {
   useEffect(() => {
@@ -11,8 +11,8 @@ export const Animation = () => {
       loop: true,
       easing: "easeInOutQuad",
       direction: "alternate",
-    });
-  }, []);
+    })
+  }, [])
 
   const animateJs = () => {
     anime({
@@ -23,7 +23,7 @@ export const Animation = () => {
       },
       translateY: { value: 100 },
       direction: "normal",
-    });
+    })
 
     anime({
       targets: ".php",
@@ -33,7 +33,7 @@ export const Animation = () => {
       },
       translateY: { value: -100 },
       direction: "normal",
-    });
+    })
 
     anime({
       targets: ".laravel",
@@ -43,7 +43,7 @@ export const Animation = () => {
       },
       translateY: { value: -100 },
       direction: "normal",
-    });
+    })
 
     anime({
       targets: ".codeigniter",
@@ -53,7 +53,7 @@ export const Animation = () => {
       },
       translateY: { value: -40 },
       direction: "normal",
-    });
+    })
 
     anime({
       targets: ".mysql",
@@ -63,7 +63,7 @@ export const Animation = () => {
       },
       translateY: { value: -150 },
       direction: "normal",
-    });
+    })
 
     anime({
       targets: ".react",
@@ -73,7 +73,17 @@ export const Animation = () => {
       },
       translateY: { value: 150 },
       direction: "normal",
-    });
+    })
+
+    anime({
+      targets: ".react-native",
+      translateX: {
+        value: 300,
+        duration: 20000,
+      },
+      translateY: { value: 200 },
+      direction: "normal",
+    })
 
     anime({
       targets: ".nodejs",
@@ -83,7 +93,7 @@ export const Animation = () => {
       },
       translateY: { value: 100, duration: 5000 },
       direction: "normal",
-    });
+    })
     anime({
       targets: ".git",
       translateX: {
@@ -92,8 +102,8 @@ export const Animation = () => {
       },
       translateY: { value: 120, duration: 5000 },
       direction: "normal",
-    });
-  };
+    })
+  }
 
   return (
     <>
@@ -104,6 +114,7 @@ export const Animation = () => {
         <div className="codeigniter">Codeigniter</div>
         <div className="mysql">MySql</div>
         <div className="react">React</div>
+        <div className="react-native">React Native</div>
         <div className="nodejs">Nodejs</div>
         <div className="git">git</div>
         <div className="mainCircle" onMouseOver={animateJs}>
@@ -111,5 +122,5 @@ export const Animation = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
