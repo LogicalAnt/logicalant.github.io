@@ -1,29 +1,30 @@
-import AppBar from "@material-ui/core/AppBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Divider from "@material-ui/core/Divider";
-import Drawer from "@material-ui/core/Drawer";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
+import AppBar from "@material-ui/core/AppBar"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import Divider from "@material-ui/core/Divider"
+import Drawer from "@material-ui/core/Drawer"
+import IconButton from "@material-ui/core/IconButton"
+import List from "@material-ui/core/List"
+import ListItem from "@material-ui/core/ListItem"
+import ListItemIcon from "@material-ui/core/ListItemIcon"
+import ListItemText from "@material-ui/core/ListItemText"
 import {
   createStyles,
   makeStyles,
   Theme,
   useTheme,
-} from "@material-ui/core/styles";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import MenuIcon from "@material-ui/icons/Menu";
-import clsx from "clsx";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { SidebarItems } from "./sidebarItems";
+} from "@material-ui/core/styles"
+import Toolbar from "@material-ui/core/Toolbar"
+import Tooltip from "@material-ui/core/Tooltip"
+import Typography from "@material-ui/core/Typography"
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
+import ChevronRightIcon from "@material-ui/icons/ChevronRight"
+import MenuIcon from "@material-ui/icons/Menu"
+import clsx from "clsx"
+import React, { useState } from "react"
+import { Link } from "react-router-dom"
+import { SidebarItems } from "./sidebarItems"
 
-const drawerWidth = 200;
+const drawerWidth = 200
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -99,22 +100,22 @@ const useStyles = makeStyles((theme: Theme) =>
       height: theme.spacing(13),
     },
   })
-);
+)
 
 export const Navbar = (routes: any) => {
-  const classes = useStyles();
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const classes = useStyles()
+  const theme = useTheme()
+  const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleDrawerClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
-  const [selectList, setSelectList] = useState(0);
+  const [selectList, setSelectList] = useState(0)
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -176,9 +177,15 @@ export const Navbar = (routes: any) => {
                 backgroundColor: index === selectList ? "#ff634733" : "",
               }}
             >
-              <ListItemIcon style={{ color: "tomato" }}>
-                {item.itemIcon}
-              </ListItemIcon>
+              <Tooltip
+                title={open ? "" : item.itemName}
+                placement="right-start"
+                arrow
+              >
+                <ListItemIcon style={{ color: "tomato" }}>
+                  {item.itemIcon}
+                </ListItemIcon>
+              </Tooltip>
               <ListItemText
                 style={{ color: "white" }}
                 primary={item.itemName}
@@ -192,5 +199,5 @@ export const Navbar = (routes: any) => {
         {routes.children}
       </main>
     </div>
-  );
-};
+  )
+}
